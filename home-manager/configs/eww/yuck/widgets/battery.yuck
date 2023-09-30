@@ -1,0 +1,16 @@
+(deflisten battery_value "~/.config/eww/scripts/battery --value")
+(deflisten battery_status "~/.config/eww/scripts/battery --status")
+(defwidget battery []
+  (box :class "bat_module":vexpand "true" :hexpand "true"
+            (circular-progress :value battery_value
+                :class "batbar"
+                :height 20
+                :width 20
+                :thickness 4
+            (button
+                :class "iconbat"
+                :limit-width 2
+                :tooltip "Battery is ${battery_status} on ${battery_value}%"
+                :show_truncated false
+                :wrap false
+                ""))))

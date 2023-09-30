@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+status=$(systemctl status bluetooth | grep 'running')
+essid=$(bluetoothctl devices Connected | awk '{$1=$2=""; print$0}')
+
+if [ $status ]; then
+    icon=""
+    text="Connected To ${essid}"
+    class="bluetooth_connected"
+else
+    icon="󰂲"
+    text="Disconnected"
+    class="bluetooth_discconected"
+fi
+
+if [[ "$1" == "--class" ]]; then
+    echo $class
+elif [[ "$1" == "--essid" ]]; then
+    echo $text
+elif [[ "$1" == "--icon" ]]; then
+    echo $icon
+fi

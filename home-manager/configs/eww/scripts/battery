@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+battery() {
+    BAT=$(ls /sys/class/power_supply | grep BAT | head -n 1)
+    cat /sys/class/power_supply/${BAT}/capacity
+}
+battery_stat() {
+    BAT=$(ls /sys/class/power_supply | grep BAT | head -n 1)
+    cat /sys/class/power_supply/${BAT}/status
+}
+
+if [[ "$1" == "--value" ]]; then
+    while true; do
+        battery
+        sleep 1
+    done
+elif [[ "$1" == "--status" ]]; then
+    while true; do
+        battery_stat
+        sleep 1
+    done
+fi

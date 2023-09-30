@@ -1,0 +1,5 @@
+(include "./yuck/widgets/time.yuck")
+(include "./yuck/widgets/battery.yuck")
+(include "./yuck/widgets/bluetooth.yuck")
+(include "./yuck/widgets/wifi.yuck")
+(include "./yuck/widgets/workspaces.yuck")

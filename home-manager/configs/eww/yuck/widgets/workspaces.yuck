@@ -1,0 +1,5 @@
+(deflisten workspace "~/.config/eww/scripts/workspace")
+(defwidget workspaces []
+  (literal
+    :content workspace
+  :valign "center"))

@@ -1,0 +1,5 @@
+(defpoll date_poll :interval "1s" "date +%b' '%a' '%d' '%H:%M")
+
+(defwidget date []
+    (label :class "date"
+     :text date_poll ))

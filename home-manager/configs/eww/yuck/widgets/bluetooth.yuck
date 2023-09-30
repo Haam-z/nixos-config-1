@@ -1,0 +1,10 @@
+(defpoll bluetooth_class :interval "1s" "~/.config/eww/scripts/bluetooth --class")
+(defpoll bluetooth_name  :interval "1s" "~/.config/eww/scripts/bluetooth --essid")
+(defpoll bluetooth_icon  :interval "1s" "~/.config/eww/scripts/bluetooth --icon")
+
+(defwidget bluetooth[]
+  (box
+    (label
+     :tooltip bluetooth_name
+     :text bluetooth_icon
+     :class bluetooth_class )))

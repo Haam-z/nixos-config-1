@@ -1,0 +1,227 @@
+$foreground: #ffffff;
+$grey: #aaaaaa;
+$foreground-alt: #465059;
+$background: #0e1419;
+$black: #000000;
+$red: #ff6565;
+$green: #b8cc52;
+$yellow: #e6c446;
+$blue: #68d4ff;
+$magenta: #ffa3aa;
+$cyan: #36a3d9;
+$white: #ffffff;
+
+* {
+  all: unset;
+  font-family: "Cantarell";
+}
+
+window {
+  background: $background;
+}
+
+.bar {
+  font-size: 13px;
+  margin: 0 10px;
+}
+
+.icon-module {
+  margin: 0 5px;
+  & > &__icon {
+    margin-right: 5px;
+  }
+}
+.sound {
+}
+
+.workspaces {
+  font-size: 12px;
+  margin-right: 20px;
+
+  button {
+    margin: 0px 3px;
+  }
+  .occupied {
+    color: $grey;
+  }
+
+  .focused {
+    color: $white;
+  }
+
+  .urgent {
+    color: $red;
+  }
+
+  .empty {
+    padding-top: 2px;
+    color: $foreground-alt;
+    font-size: 10px;
+  }
+}
+.ws-btn {
+  .ws-icon {
+    padding: 7px 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+
+    color: $red;
+    border: 2px solid $red;
+    box-shadow: $red 0px 0px 0px 0px;
+    opacity: 0.5;
+
+    border-radius: 10px;
+    transition: 0.1s all ease;
+  }
+}
+
+.ws-btn:hover {
+  .ws-icon {
+    transition: 0.1s all ease;
+  }
+}
+
+.ws-btn {
+  .ws0,
+  .ws01,
+  .ws02,
+  .ws03,
+  .ws04,
+  .ws05,
+  .ws06,
+  .ws011,
+  .ws022,
+  .ws033,
+  .ws044,
+  .ws055,
+  .ws066 {
+  }
+
+  /* Unoccupied */
+  .ws0 {
+  }
+
+  /* Occupied */
+  .ws01,
+  .ws02,
+  .ws03,
+  .ws04,
+  .ws05,
+  .ws06,
+  .ws07,
+  .ws08,
+  .ws09,
+  .ws010 {
+  }
+
+  /* Focused */
+  .ws011,
+  .ws022,
+  .ws033,
+  .ws044,
+  .ws055,
+  .ws066,
+  .ws077,
+  .ws088,
+  .ws099,
+  .ws01010 {
+    border: 2px solid $red /*light*/;
+    box-shadow: $red /*light*/ 0px 5px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: $red;
+
+    opacity: 1;
+  }
+}
+
+.ws-btn:hover {
+  /* Unoccupied */
+  .ws0 {
+    box-shadow: $red /*light*/ 0px 5px 0px 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  /* Occupied */
+  .ws01,
+  .ws02,
+  .ws03,
+  .ws04,
+  .ws05,
+  .ws06,
+  .ws07,
+  .ws08,
+  .ws09,
+  .ws010 {
+  }
+
+  /* Focused */
+  .ws011,
+  .ws022,
+  .ws033,
+  .ws044,
+  .ws055,
+  .ws066,
+  .ws077,
+  .ws088,
+  .ws099,
+  .ws01010 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    box-shadow: $red /*light*/ 0px 0px 0px 0px;
+  }
+}
+.date {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.bat_module {
+    background-color: #0f0f17;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.batbar {
+  color: #afbea2;
+  background-color: #38384d;
+  border-radius: 10px;
+}
+.iconbat {
+    color: #afbea2;
+}
+tooltip.background {
+    background-color: #0f0f17;
+    font-size: 13px;
+    border-radius: 10px;
+    color: #bfc9db;
+}
+
+tooltip label {
+    margin: 6px;
+}
+.separ {
+    color: #3e424f;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0px 8px 0px 8px;
+  }
+module_essid {
+    font-size: 18;
+    color: #a1bdce;
+  margin: 0px 10px 0px 0px;
+}
+.module-wif {
+    font-size: 22;
+    color: #a1bdce;
+    border-radius: 100%;
+  margin: 0px 10px 0px 5px;
+}
+.wifi_connected {
+  font-family: "Fira Code Nerd Font";
+}
+.wifi_discconected {
+  font-family: "Fira Code Nerd Font";
+}

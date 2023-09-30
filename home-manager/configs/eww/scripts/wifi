@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+status=$(curl -Is http://www.google.com | head -n 1 | grep -oE "HTTP")
+essid=$(nmcli c | grep wlp | awk '{print ($1)}')
+
+if [ $status ]; then
+    icon=""
+    text="Connected To ${essid}"
+    class="wifi_connected"
+else
+    icon=""
+    text="Disconnected"
+    class="wifi_discconected"
+fi
+
+if [[ "$1" == "--class" ]]; then
+    echo $class
+elif [[ "$1" == "--essid" ]]; then
+    echo $text
+elif [[ "$1" == "--icon" ]]; then
+    echo $icon
+fi

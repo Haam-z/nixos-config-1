@@ -1,0 +1,31 @@
+(include "./yuck/widgets.yuck")
+; Windows foldstart
+(defwindow bar
+  :stacking "fg"
+  :exclusive true
+  :focusable false
+  :monitor 0
+  :geometry (geometry :anchor "top center" :x 0 :y 0 :width "100%" :height "30px")
+  (bar :screen 0))
+; foldend
+
+; Bar foldstart
+(defwidget bar [screen]
+  (box
+  (box :orientation "horizontal"
+       :halign "start"
+       (workspaces))
+  (box :orientation "horizontal"
+       :halign "center"
+       (date))
+  (box :orientation "horizontal"
+       :halign "end"
+       (bluetooth)
+       (wifi)
+       (sep)
+       (battery))))
+
+(defwidget sep []
+  (box :class "module-2" :vexpand "false" :hexpand "false"
+    (label :class "separ" :text "|")))
+
