@@ -22,6 +22,39 @@
     username = "haam";
     homeDirectory = "/home/haam";
     stateVersion = "23.05";
+    packages = with pkgs; [
+      #rust
+      rustup
+      # c/c++
+      clang
+      clang-tools
+      #nix
+      rnix-lsp
+      nixfmt
+      #shell scripting
+      nodePackages_latest.bash-language-server
+      shfmt
+      #Latex and markdown
+      #python
+      python3
+      # window manager
+      dunst
+      haskellPackages.greenclip
+      pamixer
+      rofi
+      # desktop
+      handbrake
+      tenacity
+      mailspring
+      tor-browser-bundle-bin
+      virt-manager
+      nemo
+      inkscape
+      blender
+      scribus
+      emacs29-pgtk
+      retroarchFull
+    ];
   };
   # Nicely reload system units when changing configs
 
